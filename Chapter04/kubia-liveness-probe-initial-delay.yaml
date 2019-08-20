@@ -4,7 +4,7 @@ metadata:
   name: kubia-liveness
 spec:
   containers:
-  - image: luksa/kubia-unhealthy
+  - image: sammyne/kubia-unhealthy
     name: kubia
     livenessProbe:
       httpGet:
