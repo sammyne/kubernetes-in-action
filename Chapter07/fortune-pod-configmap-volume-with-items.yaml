@@ -4,7 +4,7 @@ metadata:
   name: fortune-configmap-volume-with-items
 spec:
   containers:
-  - image: luksa/fortune:env
+  - image: sammyne/fortune-env:alpine-3.10.2
     name: html-generator
     volumeMounts:
     - name: html

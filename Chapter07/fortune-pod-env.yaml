@@ -4,7 +4,7 @@ metadata:
   name: fortune-env
 spec:
   containers:
-  - image: luksa/fortune:env
+  - image: sammyne/fortune-env:alpine-3.10.2
     env:
     - name: INTERVAL
       value: "30"

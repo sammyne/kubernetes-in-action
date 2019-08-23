@@ -4,7 +4,7 @@ metadata:
   name: fortune-https
 spec:
   containers:
-  - image: luksa/fortune:env
+  - image: sammyne/fortune-env:alpine-3.10.2
     name: html-generator
     env:
     - name: INTERVAL
