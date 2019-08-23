@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: kubia
-        image: luksa/kubia-pet-peers
+        image: sammyne/kubia-pet-peers
         ports:
         - name: http
           containerPort: 8080
