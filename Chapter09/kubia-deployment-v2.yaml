@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kubia
@@ -10,5 +10,5 @@ spec:
         app: kubia
     spec:
       containers:
-      - image: luksa/kubia:v2
-        name: nodejs
+      - image: sammyne/kubia:v2
+        name: golang

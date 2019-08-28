@@ -14,7 +14,7 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 
-	fmt.Fprintf(w, "You've hit '%s'\n", host)
+	fmt.Fprintf(w, "This is v2 running in pod '%s'\n", host)
 }
 
 func main() {

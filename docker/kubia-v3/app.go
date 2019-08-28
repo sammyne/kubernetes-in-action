@@ -6,6 +6,8 @@ import (
 	"os"
 )
 
+var requestCount int
+
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Received request from", r.RemoteAddr)
 
@@ -14,7 +16,14 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 
-	fmt.Fprintf(w, "You've hit '%s'\n", host)
+	requestCount++
+	if requestCount >= 5 {
+		w.WriteHeader(http.StatusInternalServerError)
+		fmt.Fprintf(w, "Some internal error has occurred! This is pod '%s'\n", host)
+		return
+	}
+
+	fmt.Fprintf(w, "This is v3 running in pod '%s'\n", host)
 }
 
 func main() {
