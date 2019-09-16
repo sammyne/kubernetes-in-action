@@ -85,8 +85,6 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "- %s: %s\n", addr.Target, data)
 		resp.Body.Close()
 	}
-
-	//w.WriteHeader(http.StatusOK)
 }
 
 func main() {

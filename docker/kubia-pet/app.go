@@ -9,12 +9,6 @@ import (
 
 const dataFile = "/var/data/kubia.txt"
 
-func PathExists(path string) bool {
-	_, err := os.Stat(path)
-
-	return err == nil
-}
-
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Received request from", r.RemoteAddr)
 
